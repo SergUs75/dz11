@@ -94,7 +94,7 @@ class Record:
     def __str__(self) -> str:
         return f"{self.name} {str(self.birthday)} ({self.days_to_birthday(self.birthday)}): {', '.join(str(p) for p in self.phones)}"
 
-    def days_to_birthday(self, birthday:str):
+    def days_to_birthday(self, birthday:date):
         if birthday:
             day, month  = map(int, str(birthday)[:5].split('.'))
             today = date.today()

@@ -47,7 +47,6 @@ def delete_phone_command(*args):
     name = Name(args[0])
     phone = Phone(args[1])
     rec: Record = address_book.get(str(name))
-    print(name)
     if rec:
         return rec.delete_phone(phone)
     return f"No contact {name} in address book"
