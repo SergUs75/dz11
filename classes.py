@@ -53,7 +53,6 @@ class Birthday(Field):
         if value:
             try:
                 day, month, year = map(int, value.split('.'))
-                date(year, month, day)
                 self.__value = date(year, month, day)              
             except ValueError:
                  raise ValueError("Invalid birthday format. Please use dd.mm.YYYY format.")
